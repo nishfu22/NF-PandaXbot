@@ -1,1 +1,1 @@
-__version__ = "💐🐼💐"
+__version__ = "Panda.V-2021"
