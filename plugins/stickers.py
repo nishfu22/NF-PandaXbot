@@ -36,15 +36,16 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw
 from telethon import utils
-from telethon.errors import ChatSendStickersForbiddenError, PackShortNameOccupiedError
+from telethon.errors import (
+    ChatSendInlineForbiddenError,
+    ChatSendStickersForbiddenError,
+    PackShortNameOccupiedError,
+)
 from telethon.tl.types import (
     DocumentAttributeFilename,
     DocumentAttributeSticker,
     MessageMediaPhoto,
 )
-
-
-from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
 
 from . import *
 
@@ -688,4 +689,3 @@ async def nope(doit):
         await a.delete()
     except ChatSendInlineForbiddenError:
         await eor(doit, "`Boss ! I cant use inline things here...`")
-
