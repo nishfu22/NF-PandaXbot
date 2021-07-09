@@ -14,6 +14,14 @@
     To extract round sticker.
 • `{i}waifu <text>`
     paste text on random stickers.
+• `{i}uta <search query>`
+    Inline song search and downloader.
+• `{i}stic <emoji>`
+    Get random stickers from emoji.
+• `{i}frog <text>`
+    make text stickers.
+• `{i}tweet <text>`
+    make twitter posts.
 """
 
 import asyncio
