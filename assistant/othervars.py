@@ -464,7 +464,7 @@ async def taglogerr(event):
 @owner
 async def pmset(event):
     await event.edit(
-        "ADDONS ~ Extra Plugins:",
+        "MODULES ~ Extra Plugins:",
         buttons=[
             [Button.inline("𝙼𝚘𝚍𝚞𝚕𝚎𝚜 ᴏɴ", data="edon")],
             [Button.inline("𝙼𝚘𝚍𝚞𝚕𝚎𝚜 ᴏғғ", data="edof")],
