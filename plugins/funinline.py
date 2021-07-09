@@ -12,9 +12,9 @@
 
 import random
 
+from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
+
 from plugins.stickertools import deEmojify
-from telethon.errors import (ChatSendInlineForbiddenError,
-                             ChatSendStickersForbiddenError)
 
 from . import *
 
@@ -49,7 +49,7 @@ async def tweet(e):
         return await wai.edit("`Give me Some Emoji !`")
     try:
         results = await petercordpanda_bot.inline_query("sticker", text)
-        num = random.randrange(0, len(results) -1)
+        num = random.randrange(0, len(results) - 1)
         await results[num].click(
             e.chat_id,
             silent=True,
