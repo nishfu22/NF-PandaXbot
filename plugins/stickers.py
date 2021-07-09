@@ -1,4 +1,3 @@
-
 """
 💐 Commands Available -
 • `{i}destroy <reply to animated sticker>`
