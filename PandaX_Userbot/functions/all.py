@@ -73,7 +73,7 @@ from ..utils import *
 from ._FastTelethon import download_file as downloadable
 from ._FastTelethon import upload_file as uploadable
 
-petercordpanda_version = "💐0.0.8.1💐"
+petercordpanda_version = "V-MansiezX.2021"
 
 OAUTH_SCOPE = "https://www.googleapis.com/auth/drive.file"
 REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob"
