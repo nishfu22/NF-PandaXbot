@@ -1,0 +1,70 @@
+{
+  "name": "Pandauserbot",
+  "description": "A simple Telegram userbot based on Telethon . Maintained by IlhamMansiez ",
+  "logo": "https://telegra.ph/file/3cfda2e8353bb1569cc79.jpg",
+  "keywords": [
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/IlhamMansiez/PetercordPanda",
+  "website": "#TODO",
+  "success_url": "#TODO",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": ""
+    },
+    "SESSION": {
+      "description": "Ambil string session TELETHON KETIKA MENGAMBIL KETIK T JANGAN P",
+      "value": "",
+      "required": true
+    },
+    "REDIS_URI": {
+      "description": "Redis endpoint URL, from redislabs.com",
+      "value": ""
+    },
+    "REDIS_PASSWORD": {
+      "description": "Redis end password,from redislabs.com",
+      "value": ""
+    
+    },
+    "HEROKU_API": {
+      "description": "Required for updating the bot and other stuff get it from https://dashboard.heroku.com/account",
+      "value": "",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "YOUR app name ",
+      "value": "",
+      "required": false
+    }
+  },
+  "addons": [{
+    "plan": "heroku-postgresql",
+    "options": {
+      "version": "12"
+    }
+  }],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "https://github.com/heroku/heroku-buildpack-redis"
+  }, {
+    "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
+  },{
+    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+  },{
+    "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+  },{
+    "url": "https://github.com/chrismytton/heroku-buildpack-jq"
+  },{
+    "url": "heroku/python"
+  }]
+}
