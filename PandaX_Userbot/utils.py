@@ -84,8 +84,8 @@ def load_modules(plugin_name):
     if plugin_name.startswith("__"):
         pass
     elif plugin_name.endswith("_"):
-        path = Path(f"addons/{plugin_name}.py")
-        name = "addons.{}".format(plugin_name)
+        path = Path(f"modules/{plugin_name}.py")
+        name = "modules.{}".format(plugin_name)
         spec = util.spec_from_file_location(name, path)
         mod = util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -107,7 +107,7 @@ def load_modules(plugin_name):
         from .misc._wrappers import eod, eor
 
         path = Path(f"addons/{plugin_name}.py")
-        name = "addons.{}".format(plugin_name)
+        name = "modules.{}".format(plugin_name)
         spec = util.spec_from_file_location(name, path)
         mod = util.module_from_spec(spec)
         mod.asst = petercordpanda_bot.asst
@@ -170,7 +170,7 @@ def load_modules(plugin_name):
                 else:
                     pass
             try:
-                doc = modules[f"addons.{plugin_name}"].__doc__
+                doc = modules[f"modules.{plugin_name}"].__doc__
                 HELP.update({f"{plugin_name}": doc.format(i=HNDLR)})
             except KeyError:
                 pass
