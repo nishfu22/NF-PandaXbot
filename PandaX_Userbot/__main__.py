@@ -41,7 +41,7 @@ from .functions.all import updater
 from .utils import load_assistant, load_modules, load_plugins, load_pmbot
 from .version import __version__ as ver
 
-x = ["resources/auths", "resources/downloads", "addons"]
+x = ["resources/auths", "resources/downloads", "modules"]
 for x in x:
     if not os.path.isdir(x):
         os.mkdir(x)
@@ -305,7 +305,7 @@ for plugin_name in files:
         LOGS.info(f"🐼 PandaUserbot - Assistant - ERROR - {plugin_name}")
         LOGS.info(str(traceback.print_exc()))
 
-# for addons
+# for modules
 modules = udB.get("MODULES")
 if modules == "True" or modules is None:
     try:
@@ -346,7 +346,7 @@ if Plug_channel:
                 chat, search=".py", filter=InputMessagesFilterDocument
             ):
                 await asyncio.sleep(0.6)
-                files = await petercordpanda_bot.download_media(x.media, "./addons/")
+                files = await petercordpanda_bot.download_media(x.media, "./modules/")
                 file = Path(files)
                 plugin = file.stem
                 if "(" not in files:
