@@ -225,7 +225,7 @@ async def hehe(args):
         elif "image" in message.media.document.mime_type.split("/"):
             await xx.edit(f"`{random.choice(KANGING_STR)}`")
             photo = io.BytesIO()
-            await ultroid_bot.download_file(message.media.document, photo)
+            await petercordpanda_bot.download_file(message.media.document, photo)
             if (
                 DocumentAttributeFilename(file_name="sticker.webp")
                 in message.media.document.attributes
@@ -264,7 +264,7 @@ async def hehe(args):
         emoji = "🏵"
         pack = 1
         if len(splat) == 3:
-            pack = splat[2]  # User sent ultroid_both
+            pack = splat[2]  # User sent petercordpanda_bot
             emoji = splat[1]
         elif len(splat) == 2:
             if splat[1].isnumeric():
