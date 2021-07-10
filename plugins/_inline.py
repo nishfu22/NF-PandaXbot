@@ -532,6 +532,50 @@ async def on_plug_in_callback_query_handler(event):
 
 @callback(
     re.compile(
+        b"def_plugin_(.*)",
+    ),
+)
+@owner
+async def on_plug_in_callback_query_handler(event):
+    plugin_name = event.data_match.group(1).decode("UTF-8")
+    help_string = f"nama plugin : `{plugin_name}`\n"
+    try:
+        for i in HELP[plugin_name]:
+            help_string += i
+    except BaseException:
+        pass
+    if help_string == "":
+        reply_pop_up_alert = f"{plugin_name} tidak memiliki bantuan terperinci."
+    else:
+        reply_pop_up_alert = help_string
+    reply_pop_up_alert += "\n☑ @TEAMSquadUserbotSupport"
+    buttons = [
+        [
+            Button.inline(
+                "« sᴇɴᴅ ᴘʟᴜɢɪɴ »",
+                data=f"sndplug_{(event.data).decode('UTF-8')}",
+            )
+        ],
+        [
+            Button.inline("« ʙᴀᴄᴋ", data="backpanda"),
+            Button.inline("• ᴄʟᴏsᴇ •", data="close"),
+        ],
+    ]
+    try:
+        if str(event.query.user_id) in owner_and_sudos():
+            await event.edit(
+                reply_pop_up_alert,
+                buttons=buttons,
+            )
+        else:
+            reply_pop_up_alert = notmine
+            await event.answer(reply_pop_up_alert, cache_time=0)
+    except BaseException:
+        halps = f"ketik .help {plugin_name} untuk mendapatkan daftar perintah."
+        await event.edit(halps, buttons=buttons)
+
+@callback(
+    re.compile(
         b"add_plugin_(.*)",
     ),
 )
