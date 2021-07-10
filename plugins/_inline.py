@@ -43,6 +43,7 @@ _main_help_menu = [
     [
         Button.inline("📙 𝙿𝙻𝚄𝙶𝙸𝙽𝚂 📙", data="hrrrr"),
         Button.inline("📗 𝐌𝐨𝐝𝐮𝐥𝐞𝐬 📗", data="frrr"),
+        Button.inline("📒Exra Panda📒", data="ilham"),
     ],
     [
         Button.inline("🐼 DATA PANDA 🐼", data="ownr"),
@@ -325,6 +326,14 @@ async def addon(event):
             cache_time=0,
             alert=True,
         )
+
+
+@callback("ilham")
+@owner
+async def on_plug_in_callback_query_handler(event):
+    xhelps = helps.format(OWNER_NAME, len(PANDA))
+    buttons = page_num(0, PANDA, "helpme", "def")
+    await event.edit(f"{xhelps}", buttons=buttons, link_preview=False)
 
 
 @callback("rstrt")
