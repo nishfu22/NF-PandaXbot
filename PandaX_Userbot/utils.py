@@ -77,6 +77,79 @@ def load_plugins(plugin_name):
                 print(e)
 
 
+def load_panda(plugin_name):
+    if plugin_name.startswith("__"):
+        pass
+    elif plugin_name.endswith("_"):
+        path = Path(f"Panda-Userbot/{plugin_name}.py")
+        name = "Panda-Userbot.{}".format(plugin_name)
+        spec = util.spec_from_file_location(name, path)
+        mod = util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+    else:
+        from . import HNDLR, LOGS, petercordpanda_bot, udB
+        from .dB.core import HELP, PANDA
+        from .dB.database import Var
+        from .misc import _supporter as xxx
+        from .misc._assistant import (
+            asst_cmd,
+            callback,
+            in_pattern,
+            inline,
+            inline_owner,
+            owner,
+        )
+        from .misc._decorators import ilhammansiz_cmd
+        from .misc._wrappers import eod, eor
+
+        path = Path(f"Panda-Userbot/{plugin_name}.py")
+        name = "Panda-Userbot.{}".format(plugin_name)
+        spec = util.spec_from_file_location(name, path)
+        mod = util.module_from_spec(spec)
+        mod.asst = petercordpanda_bot.asst
+        mod.tgbot = petercordpanda_bot.asst
+        mod.petercordpanda_bot = petercordpanda_bot
+        mod.bot = petercordpanda_bot
+        mod.petercordpanda = petercordpanda_bot
+        mod.owner = owner()
+        mod.in_owner = inline_owner()
+        mod.inline = inline()
+        mod.in_pattern = in_pattern
+        mod.eod = eod
+        mod.edit_delete = eod
+        mod.LOGS = LOGS
+        mod.hndlr = HNDLR
+        mod.HNDLR = HNDLR
+        mod.Var = Var
+        mod.eor = eor
+        mod.edit_or_reply = eor
+        mod.asst_cmd = asst_cmd
+        mod.ilhammansiz_cmd = ilhammansiz_cmd
+        mod.on_cmd = ilhammansiz_cmd
+        mod.callback = callback
+        mod.Redis = udB.get
+        modules["support"] = xxx
+        modules["userbot"] = xxx
+        modules["userbot.utils"] = xxx
+        modules["userbot.config"] = xxx
+        spec.loader.exec_module(mod)
+        modules["Panda-Userbot." + plugin_name] = mod
+        if not plugin_name.startswith("_"):
+            try:
+                PANDA.append(plugin_name)
+            except BaseException:
+                if plugin_name not in PANDA:
+                    PANDA.append(plugin_name)
+                else:
+                    pass
+            try:
+                doc = modules[f"Panda-Userbot.{plugin_name}"].__doc__
+                HELP.update({f"{plugin_name}": doc.format(i=HNDLR)})
+            except KeyError:
+                pass
+            except Exception as e:
+                print(e)
+
 # for modules
 
 
