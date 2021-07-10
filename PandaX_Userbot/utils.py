@@ -100,7 +100,6 @@ def load_panda(plugin_name):
             owner,
         )
         from .misc._decorators import ilhammansiz_cmd
-        from .misc._supporter import Config, admin_cmd, sudo_cmd
         from .misc._wrappers import eod, eor
 
         path = Path(f"Panda-Userbot/{plugin_name}.py")
@@ -110,25 +109,17 @@ def load_panda(plugin_name):
         mod.asst = petercordpanda_bot.asst
         mod.tgbot = petercordpanda_bot.asst
         mod.petercordpanda_bot = petercordpanda_bot
-        mod.ub = petercordpanda_bot
         mod.bot = petercordpanda_bot
         mod.petercordpanda = petercordpanda_bot
-        mod.borg = petercordpanda_bot
-        mod.telebot = petercordpanda_bot
-        mod.jarvis = petercordpanda_bot
-        mod.friday = petercordpanda_bot
         mod.owner = owner()
         mod.in_owner = inline_owner()
         mod.inline = inline()
+        mod.in_pattern = in_pattern
         mod.eod = eod
         mod.edit_delete = eod
         mod.LOGS = LOGS
-        mod.in_pattern = in_pattern
         mod.hndlr = HNDLR
-        mod.handler = HNDLR
         mod.HNDLR = HNDLR
-        mod.CMD_HNDLR = HNDLR
-        mod.Config = Config
         mod.Var = Var
         mod.eor = eor
         mod.edit_or_reply = eor
@@ -137,25 +128,10 @@ def load_panda(plugin_name):
         mod.on_cmd = ilhammansiz_cmd
         mod.callback = callback
         mod.Redis = udB.get
-        mod.admin_cmd = admin_cmd
-        mod.sudo_cmd = sudo_cmd
-        modules["ub"] = xxx
-        modules["var"] = xxx
-        modules["jarvis"] = xxx
         modules["support"] = xxx
         modules["userbot"] = xxx
-        modules["telebot"] = xxx
-        modules["fridaybot"] = xxx
-        modules["jarvis.utils"] = xxx
-        modules["uniborg.util"] = xxx
-        modules["telebot.utils"] = xxx
         modules["userbot.utils"] = xxx
-        modules["userbot.events"] = xxx
-        modules["jarvis.jconfig"] = xxx
         modules["userbot.config"] = xxx
-        modules["fridaybot.utils"] = xxx
-        modules["fridaybot.Config"] = xxx
-        modules["userbot.uniborgConfig"] = xxx
         spec.loader.exec_module(mod)
         modules["Panda-Userbot." + plugin_name] = mod
         if not plugin_name.startswith("_"):
