@@ -19,7 +19,7 @@
    * `{i}listdest <channel username or id>`
       Show List of Ur channels
    'you can set many channels in database'
-   'For activating auto-post use `{i}setredis AUTOPOST True` '
+   'For activating auto-post use `{i}setvar AUTOPOST True` '
 """
 
 import asyncio
