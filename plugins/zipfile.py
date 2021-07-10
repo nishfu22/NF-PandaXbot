@@ -82,7 +82,7 @@ async def unzipp(event):
     for x in ok:
         k = time.time()
         xxx = await uploader(x, x, k, xx, "Uploading...")
-        await ultroid_bot.send_file(
+        await petercordpanda_bot.send_file(
             event.chat_id,
             xxx,
             force_document=True,
