@@ -1,7 +1,7 @@
 """
 💐 Commands Available -
 • `{i}pong`
-   ketik <handler>pong untuk melihat kecepatan sakura userbot mu.
+   ketik {i}pong untuk melihat kecepatan Panda Userbotmu.
 """
 
 import asyncio
@@ -14,5 +14,5 @@ async def dsb(ult):
 	await asyncio.sleep(0.5)
 	await ult.edit("`pong....!`")
 	await asyncio.sleep(0.5)
-	await ult.edit("`🎗 PONG 🎗\n\n➡ PANDA USERBOT \n➡ 69.69ms\n➡ 🐼 PANDA 🐼")
+	await ult.edit("🎗 PONG 🎗\n\n➡ PANDA USERBOT \n➡ 69.69ms\n➡ 🐼 PANDA 🐼")
 	
