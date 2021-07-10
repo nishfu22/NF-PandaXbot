@@ -38,7 +38,7 @@ from . import *
 from .dB import DEVLIST
 from .dB.database import Var
 from .functions.all import updater
-from .utils import load_assistant, load_modules, load_plugins, load_pmbot
+from .utils import load_assistant, load_modules, load_plugins, load_pmbot, load_panda
 from .version import __version__ as ver
 
 x = ["resources/auths", "resources/downloads", "modules"]
