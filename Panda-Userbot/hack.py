@@ -1,5 +1,5 @@
 import asyncio
-
+from . import *
 
 @ilhammansiz_cmd(pattern="hack")
 async def hack(event):
