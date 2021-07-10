@@ -30,7 +30,7 @@ async def get_the_modules_lol(event):
     await xx.edit("Packed. Now loading the plugin..")
     shortname = name_of_it.split(".")[0]
     try:
-        load_addons(shortname)
+        load_modules(shortname)
         await eod(xx, f"**Sᴜᴄᴄᴇssғᴜʟʟʏ Lᴏᴀᴅᴇᴅ** `{shortname}`", time=3)
     except Exception as e:
         await eod(
