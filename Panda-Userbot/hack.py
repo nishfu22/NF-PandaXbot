@@ -1,7 +1,7 @@
 import asyncio
 
 
-@register(outgoing=True, pattern='^.hack(?: |$)(.*)')
+@ilhammansiz_cmd(pattern="hack")
 async def hack(event):
     range(0, 11)
     await event.edit("Installing.")
