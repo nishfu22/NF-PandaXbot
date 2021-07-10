@@ -58,7 +58,7 @@ async def ult(ult):
                 buttons=[
                     [
                         Button.inline("📙 ᴘʟᴜɢɪɴs 📙", data="hrrrr"),
-                        Button.inline("📗 Modulez 📗", data="frrr"),
+                        Button.inline("📗 Modules 📗", data="frrr"),
                     ],
                     [
                         Button.inline("🐼 ᴏᴡɴᴇʀ ᴛᴏᴏʟs 🐼", data="ownr"),
