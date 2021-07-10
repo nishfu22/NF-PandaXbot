@@ -17,7 +17,7 @@ notmine = f"ini adalah bot milik {OWNER_NAME}"
 
 TLINK = "https://telegra.ph/file/0d025dc216d0ae5d36b07.jpg"
 helps = get_string("inline_1")
-helpspanda = get_string("inline_ilham")
+helpspanda = get_string("inline_1")
 
 add_ons = udB.get("MODULES")
 if add_ons == "True" or add_ons is None:
