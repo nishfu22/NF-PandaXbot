@@ -6,23 +6,12 @@ import urllib
 
 import requests
 
-from Panda import pandaub
+from . import *
 
 from ..Config import Config
-from . import pandaub
-
-plugin_category = "mansiez"
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="payudara(?: |$)(.*)",
-    command=("payudara", plugin_category),
-    info={
-        "header": "Gambar tetek 😂.",
-        "description": "Menemukan tetek wkwk😂",
-        "usage": "{tr}payudara ",
-    },
-)
+@ilhammansiz_cmd(pattern="payudara ?(.*)")
 async def boobs(event):
     if event.fwd_from:
         return
