@@ -335,11 +335,17 @@ async def addon(event):
 
 @callback("ilham")
 @owner
-async def on_plug_in_callback_query_handler(event):
+async def addon(event):
     phelps = helpspanda.format(OWNER_NAME, len(PANDA))
-    buttons = page_num(0, PANDA, "ilhammansiz", "panda")
-    await event.edit(f"{phelps}", buttons=buttons, link_preview=False)
-
+    if len(PANDA) > 0:
+        buttons = page_num(0, PANDA, "ilhammansiz", "panda")
+        await event.edit(f"{halp}", buttons=buttons, link_preview=False)
+    else:
+        await event.answer(
+            f"• ketik `{HNDLR}setvar MODULES True`\n ᴜɴᴛᴜᴋ ᴅᴀᴘᴀᴛ ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ ᴘʟᴜɢɪɴs MODULES",
+            cache_time=0,
+            alert=True,
+        )
 
 @callback("rstrt")
 @owner
@@ -359,16 +365,6 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit(buttons=buttons, link_preview=False)
 
 
-@callback(
-    re.compile(
-        rb"helpme_next\((.+?)\)",
-    ),
-)
-@owner
-async def on_plug_in_callback_query_handler(event):
-    current_page_number = int(event.data_match.group(1).decode("UTF-8"))
-    buttons = page_num(current_page_number + 1, PANDA, "ilhammansiz", "panda")
-    await event.edit(buttons=buttons, link_preview=False)
 
 
 @callback(
@@ -382,16 +378,6 @@ async def on_plug_in_callback_query_handler(event):
     buttons = page_num(current_page_number - 1, PLUGINS, "helpme", "def")
     await event.edit(buttons=buttons, link_preview=False)
 
-@callback(
-    re.compile(
-        rb"helpme_prev\((.+?)\)",
-    ),
-)
-@owner
-async def on_plug_in_callback_query_handler(event):
-    current_page_number = int(event.data_match.group(1).decode("UTF-8"))
-    buttons = page_num(current_page_number - 1, PANDA, "ilhammansiz", "panda")
-    await event.edit(buttons=buttons, link_preview=False)
 
 
 @callback(
@@ -403,6 +389,17 @@ async def on_plug_in_callback_query_handler(event):
 async def on_plug_in_callback_query_handler(event):
     current_page_number = int(event.data_match.group(1).decode("UTF-8"))
     buttons = page_num(current_page_number + 1, MODULES, "addon", "add")
+    await event.edit(buttons=buttons, link_preview=False)
+
+@callback(
+    re.compile(
+        rb"addon_next\((.+?)\)",
+    ),
+)
+@owner
+async def on_plug_in_callback_query_handler(event):
+    current_page_number = int(event.data_match.group(1).decode("UTF-8"))
+    buttons = page_num(current_page_number + 1, PANDA, "ilhammansiz", "panda")
     await event.edit(buttons=buttons, link_preview=False)
 
 
@@ -418,6 +415,19 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit(buttons=buttons, link_preview=False)
 
 
+@callback(
+    re.compile(
+        rb"addon_prev\((.+?)\)",
+    ),
+)
+@owner
+async def on_plug_in_callback_query_handler(event):
+    current_page_number = int(event.data_match.group(1).decode("UTF-8"))
+    buttons = page_num(current_page_number - 1, PANDA, "ilhammansiz", "panda")
+    await event.edit(buttons=buttons, link_preview=False)
+
+
+
 @callback("back")
 @owner
 async def backr(event):
@@ -431,14 +441,14 @@ async def backr(event):
         link_preview=False,
     )
 
-@callback("backpanda")
+@callback("buckpanda")
 @owner
 async def backr(event):
-    phelps = helpspanda.format(OWNER_NAME, len(PANDA))
+    xhelps = helpspanda.format(OWNER_NAME, len(PANDA))
     current_page_number = int(upage)
     buttons = page_num(current_page_number, PANDA, "ilhammansiz", "panda")
     await event.edit(
-        f"{phelps}",
+        f"{xhelps}",
         file=_file_to_replace,
         buttons=buttons,
         link_preview=False,
@@ -533,49 +543,6 @@ async def on_plug_in_callback_query_handler(event):
         await event.edit(halps, buttons=buttons)
 
 
-@callback(
-    re.compile(
-        b"def_plugin_(.*)",
-    ),
-)
-@owner
-async def on_plug_in_callback_query_handler(event):
-    plugin_name = event.data_match.group(1).decode("UTF-8")
-    help_string = f"nama plugin : `{plugin_name}`\n"
-    try:
-        for i in HELP[plugin_name]:
-            help_string += i
-    except BaseException:
-        pass
-    if help_string == "":
-        reply_pop_up_alert = f"{plugin_name} tidak memiliki bantuan terperinci."
-    else:
-        reply_pop_up_alert = help_string
-    reply_pop_up_alert += "\n☑ @TEAMSquadUserbotSupport"
-    buttons = [
-        [
-            Button.inline(
-                "« sᴇɴᴅ ᴘʟᴜɢɪɴ »",
-                data=f"sndplug_{(event.data).decode('UTF-8')}",
-            )
-        ],
-        [
-            Button.inline("« ʙᴀᴄᴋ", data="backpanda"),
-            Button.inline("• ᴄʟᴏsᴇ •", data="close"),
-        ],
-    ]
-    try:
-        if str(event.query.user_id) in owner_and_sudos():
-            await event.edit(
-                reply_pop_up_alert,
-                buttons=buttons,
-            )
-        else:
-            reply_pop_up_alert = notmine
-            await event.answer(reply_pop_up_alert, cache_time=0)
-    except BaseException:
-        halps = f"ketik .help {plugin_name} untuk mendapatkan daftar perintah."
-        await event.edit(halps, buttons=buttons)
 
 @callback(
     re.compile(
