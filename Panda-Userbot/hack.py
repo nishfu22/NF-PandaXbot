@@ -1,3 +1,9 @@
+"""
+💐 Commands Available : hack
+• `{i}payudara`
+   hack menipu.
+"""
+
 import asyncio
 from . import *
 
