@@ -1,4 +1,5 @@
 PLUGINS = []
+PANDA = []
 MODULES = []
 HELP = {}
 LOADED = {}
