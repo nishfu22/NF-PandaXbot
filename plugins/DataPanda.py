@@ -89,7 +89,7 @@ async def date(event):
     y = dt.now().year
     d = dt.now().strftime("Date - %B %d, %Y\nTime- %H:%M:%S")
     k = calendar.month(y, m)
-    ultroid = await eor(event, f"`{k}\n\n{d}`")
+    petercordpanda = await eor(event, f"`{k}\n\n{d}`")
 
 
 @ilhammansiz_cmd(
@@ -176,7 +176,7 @@ async def stats(
         unread += dialog.unread_count
     stop_time = time.time() - start_time
     try:
-        ct = (await ultroid_bot(GetBlockedRequest(1, 0))).count
+        ct = (await petercordpanda_bot(GetBlockedRequest(1, 0))).count
     except AttributeError:
         ct = 0
     try:
@@ -387,7 +387,7 @@ async def rmbg(event):
         )
     if event.reply_to_msg_id:
         reply = await event.get_reply_message()
-        dl = await ultroid_bot.download_media(reply.media)
+        dl = await petercordpanda_bot.download_media(reply.media)
         if not dl.endswith(("webp", "jpg", "png", "jpeg")):
             os.remove(dl)
             return await xx.edit("`Unsupported Media`")
@@ -413,13 +413,13 @@ async def rmbg(event):
     if zz.mode != "RGB":
         zz.convert("RGB")
     zz.save("ult.webp", "webp")
-    await ultroid_bot.send_file(
+    await petercordpanda_bot.send_file(
         event.chat_id,
         rmbgp,
         force_document=True,
         reply_to=reply,
     )
-    await ultroid_bot.send_file(event.chat_id, "ult.webp", reply_to=reply)
+    await petercordpanda_bot.send_file(event.chat_id, "ult.webp", reply_to=reply)
     os.remove(rmbgp)
     os.remove("ult.webp")
     await xx.delete()
@@ -443,7 +443,7 @@ async def telegraphcmd(event):
                 amsg = f"Error - {e}"
             await eor(event, amsg)
         elif "pic" in mediainfo(getmsg.media):
-            getit = await ultroid_bot.download_media(getmsg)
+            getit = await petercordpanda_bot.download_media(getmsg)
             try:
                 variable = uf(getit)
                 os.remove(getit)
