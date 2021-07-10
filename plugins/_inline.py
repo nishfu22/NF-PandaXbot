@@ -393,7 +393,7 @@ async def on_plug_in_callback_query_handler(event):
 
 @callback(
     re.compile(
-        rb"addon_next\((.+?)\)",
+        rb"ilhammansiz_next\((.+?)\)",
     ),
 )
 @owner
@@ -417,7 +417,7 @@ async def on_plug_in_callback_query_handler(event):
 
 @callback(
     re.compile(
-        rb"addon_prev\((.+?)\)",
+        rb"ilhammansiz_prev\((.+?)\)",
     ),
 )
 @owner
@@ -444,11 +444,11 @@ async def backr(event):
 @callback("buckpanda")
 @owner
 async def backr(event):
-    xhelps = helpspanda.format(OWNER_NAME, len(PANDA))
+    phelps = helpspanda.format(OWNER_NAME, len(PANDA))
     current_page_number = int(upage)
     buttons = page_num(current_page_number, PANDA, "ilhammansiz", "panda")
     await event.edit(
-        f"{xhelps}",
+        f"{phelps}",
         file=_file_to_replace,
         buttons=buttons,
         link_preview=False,
