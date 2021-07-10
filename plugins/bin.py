@@ -1,6 +1,6 @@
 
 """
-📚 Commands Available : bin
+💐 Commands Available : bin
 • `{i}bin`
    ini adalah plugin bin generator, generate kode bin secara acak.
 """
