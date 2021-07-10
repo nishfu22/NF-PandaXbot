@@ -17,7 +17,7 @@ notmine = f"ini adalah bot milik {OWNER_NAME}"
 
 TLINK = "https://telegra.ph/file/0d025dc216d0ae5d36b07.jpg"
 helps = get_string("inline_1")
-helpspanda = get_string("inline_1")
+helpspanda = get_string("inline_ilham")
 
 add_ons = udB.get("MODULES")
 if add_ons == "True" or add_ons is None:
@@ -336,7 +336,7 @@ async def addon(event):
 @callback("ilham")
 @owner
 async def on_plug_in_callback_query_handler(event):
-    xhelps = helpspanda.format(OWNER_NAME, len(PANDA))
+    phelps = helpspanda.format(OWNER_NAME, len(PANDA))
     buttons = page_num(0, PANDA, "ilhammansiz", "panda")
     await event.edit(f"{phelps}", buttons=buttons, link_preview=False)
 
