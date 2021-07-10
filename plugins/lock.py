@@ -6,8 +6,9 @@
     UNLOCK the Used Setting in Used Group.
 """
 
-from PandaX_Userbot.functions.all import lucks, unlucks
 from telethon.tl.functions.messages import EditChatDefaultBannedRightsRequest
+
+from PandaX_Userbot.functions.all import lucks, unlucks
 
 from . import *
 
