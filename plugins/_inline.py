@@ -605,6 +605,67 @@ async def on_plug_in_callback_query_handler(event):
         await event.edit(halps, buttons=buttons)
 
 
+@callback(
+    re.compile(
+        b"panda_plugin_(.*)",
+    ),
+)
+@owner
+async def on_plug_in_callback_query_handler(event):
+    plugin_name = event.data_match.group(1).decode("UTF-8")
+    help_string = ""
+    try:
+        for i in HELP[plugin_name]:
+            help_string += i
+    except BaseException:
+        try:
+            for u in CMD_HELP[plugin_name]:
+                help_string = (
+                    f"nama plugin : {plugin_name}\n\n📚 Commands Available-\n\n"
+                )
+                help_string += str(CMD_HELP[plugin_name])
+        except BaseException:
+            try:
+                if plugin_name in LIST:
+                    help_string = (
+                        f"nama plugin : {plugin_name}\n\n📚 Commands Available-\n\n"
+                    )
+                    for d in LIST[plugin_name]:
+                        help_string += HNDLR + d
+                        help_string += "\n"
+            except BaseException:
+                pass
+    if help_string == "":
+        reply_pop_up_alert = f"{plugin_name} tidak memiliki bantuan terperinci."
+    else:
+        reply_pop_up_alert = help_string
+    reply_pop_up_alert += "\n☑ @TEAMSquadUserbotSupport"
+    buttons = [
+        [
+            Button.inline(
+                "« sᴇɴᴅ ᴘʟᴜɢɪɴ »",
+                data=f"sndplug_{(event.data).decode('UTF-8')}",
+            )
+        ],
+        [
+            Button.inline("« ʙᴀᴄᴋ", data="buckpanda"),
+            Button.inline("• ᴄʟᴏsᴇ •", data="close"),
+        ],
+    ]
+    try:
+        if str(event.query.user_id) in owner_and_sudos():
+            await event.edit(
+                reply_pop_up_alert,
+                buttons=buttons,
+            )
+        else:
+            reply_pop_up_alert = notmine
+            await event.answer(reply_pop_up_alert, cache_time=0)
+    except BaseException:
+        halps = f"ketik .help {plugin_name} untuk mendapatkan daftar perintah."
+        await event.edit(halps, buttons=buttons)
+
+
 def page_num(page_number, loaded_plugins, prefix, type):
     number_of_rows = 5
     number_of_cols = 2
