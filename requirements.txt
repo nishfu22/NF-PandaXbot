@@ -58,3 +58,4 @@ aria2p
 gdown
 qrcode
 shazamio
+ProfanityDetector
