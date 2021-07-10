@@ -8,16 +8,16 @@ import requests
 
 from . import *
 
-from ..Config import Config
+from PandaX_Userbot.misc._supporter import TMP_DOWNLOAD_DIRECTORY
 
 
 @ilhammansiz_cmd(pattern="payudara ?(.*)")
 async def boobs(event):
     if event.fwd_from:
         return
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
-    pic_loc = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "bobs.jpg")
+    if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(TMP_DOWNLOAD_DIRECTORY)
+    pic_loc = os.path.join(TMP_DOWNLOAD_DIRECTORY, "bobs.jpg")
     a = await event.reply("Menemukan beberapa payudara besar untukmu 😂")
     await asyncio.sleep(0.5)
     await a.edit("Ini besar banget nih 😂")
