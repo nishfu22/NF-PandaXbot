@@ -1,4 +1,3 @@
-
 """
 💐 Commands Available -
 • `{i}gban <reply user/ username>`
@@ -122,7 +121,9 @@ async def _(e):
                         c += 1
                     except Exception as er:
                         LOGS.info(er)
-        return await eor(ev, f"mempromosikan pengguna yang dibalas dengan total : {c} {key} obrolan")
+        return await eor(
+            ev, f"mempromosikan pengguna yang dibalas dengan total : {c} {key} obrolan"
+        )
     else:
         k = e.text.split()
         if not k[1]:
@@ -186,7 +187,10 @@ async def _(e):
                         c += 1
                     except BaseException:
                         pass
-        return await eor(ev, f"berhasil mempromosikan {name.first_name} dalam total : {c} {key} obrolan.")
+        return await eor(
+            ev,
+            f"berhasil mempromosikan {name.first_name} dalam total : {c} {key} obrolan.",
+        )
 
 
 @ilhammansiz_cmd(
@@ -255,7 +259,9 @@ async def _(e):
                         c += 1
                     except BaseException:
                         pass
-        return await eor(ev, f"menurunkan pengguna yang dibalas dalam total: {c} {key} obrolan")
+        return await eor(
+            ev, f"menurunkan pengguna yang dibalas dalam total: {c} {key} obrolan"
+        )
     else:
         k = e.text.split()
         if not k[1]:
@@ -317,7 +323,10 @@ async def _(e):
                         c += 1
                     except BaseException:
                         pass
-        return await eor(ev, f"berhasil menurunkan {name.first_name} dalam total : {c} {key} obrolan.")
+        return await eor(
+            ev,
+            f"berhasil menurunkan {name.first_name} dalam total : {c} {key} obrolan.",
+        )
 
 
 @ilhammansiz_cmd(
@@ -387,7 +396,9 @@ async def _(e):
     name = (await e.client.get_entity(userid)).first_name
     chats = 0
     if userid == petercordpanda_bot.uid:
-        return await eod(xx, "`saya tidak bisa melakukan gban terhadap diri sendiri.`", time=3)
+        return await eod(
+            xx, "`saya tidak bisa melakukan gban terhadap diri sendiri.`", time=3
+        )
     if str(userid) in DEVLIST:
         return await eod(xx, "`saya tidak bisa gban developer saya.`", time=3)
     if is_gbanned(userid):
