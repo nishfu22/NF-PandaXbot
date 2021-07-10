@@ -356,6 +356,18 @@ async def on_plug_in_callback_query_handler(event):
 
 @callback(
     re.compile(
+        rb"helpme_next\((.+?)\)",
+    ),
+)
+@owner
+async def on_plug_in_callback_query_handler(event):
+    current_page_number = int(event.data_match.group(1).decode("UTF-8"))
+    buttons = page_num(current_page_number + 1, PANDA, "helpme", "def")
+    await event.edit(buttons=buttons, link_preview=False)
+
+
+@callback(
+    re.compile(
         rb"helpme_prev\((.+?)\)",
     ),
 )
@@ -363,6 +375,17 @@ async def on_plug_in_callback_query_handler(event):
 async def on_plug_in_callback_query_handler(event):
     current_page_number = int(event.data_match.group(1).decode("UTF-8"))
     buttons = page_num(current_page_number - 1, PLUGINS, "helpme", "def")
+    await event.edit(buttons=buttons, link_preview=False)
+
+@callback(
+    re.compile(
+        rb"helpme_prev\((.+?)\)",
+    ),
+)
+@owner
+async def on_plug_in_callback_query_handler(event):
+    current_page_number = int(event.data_match.group(1).decode("UTF-8"))
+    buttons = page_num(current_page_number - 1, PANDA, "helpme", "def")
     await event.edit(buttons=buttons, link_preview=False)
 
 
@@ -403,6 +426,18 @@ async def backr(event):
         link_preview=False,
     )
 
+@callback("back")
+@owner
+async def backr(event):
+    xhelps = helps.format(OWNER_NAME, len(PANDA))
+    current_page_number = int(upage)
+    buttons = page_num(current_page_number, PANDA, "helpme", "def")
+    await event.edit(
+        f"{xhelps}",
+        file=_file_to_replace,
+        buttons=buttons,
+        link_preview=False,
+    )
 
 @callback("buck")
 @owner
