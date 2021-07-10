@@ -53,6 +53,7 @@ async def ult(ult):
                     OWNER_NAME,
                     len(PLUGINS) - 5,
                     len(MODULES),
+                    len(PANDA),
                     cmd,
                 ),
                 buttons=[
