@@ -1,5 +1,13 @@
 # PORT BY ILHAM MANSIEZ
 # KARENA GABUT JADI GUE BUAT ASTAGA NGAKAK
+
+"""
+💐 Commands Available : payudara
+• `{i}payudara`
+   mengirim gambar tetek besar 😂.
+"""
+
+
 import asyncio
 import os
 import urllib
