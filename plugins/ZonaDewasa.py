@@ -18,6 +18,8 @@ from . import *
 
 from PandaX_Userbot.misc._supporter import TMP_DOWNLOAD_DIRECTORY
 
+TMP_DOWNLOAD_DIRECTORY = "resources/downloads/"
+
 
 @ilhammansiz_cmd(pattern="payudara ?(.*)")
 async def boobs(event):
