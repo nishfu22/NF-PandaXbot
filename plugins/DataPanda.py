@@ -77,7 +77,7 @@ _copied_msg = {}
 async def leave(ult):
     if not ult.out and not is_fullsudo(e.sender_id):
         return await eod(ult, "`This Command Is Sudo Restricted.`")
-    await eor(ult, f"`{ultroid_bot.me.first_name} has left this group, bye!!.`")
+    await eor(ult, f"`{petercordpanda_bot.me.first_name} has left this group, bye!!.`")
     await petercordpanda_bot(LeaveChannelRequest(ult.chat_id))
 
 
