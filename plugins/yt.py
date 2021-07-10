@@ -10,7 +10,7 @@
    Search and download video from youtube.
 """
 
-from PandaX_Useebot.functions.ytdl import *
+from PandaX_Userbot.functions.ytdl import *
 
 from . import *
 
