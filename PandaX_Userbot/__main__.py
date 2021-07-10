@@ -292,6 +292,18 @@ for plugin_name in files:
         LOGS.info(f"🐼 PandaUserbot - Official - ERROR - {plugin_name}")
         LOGS.info(str(traceback.print_exc()))
 
+#for panda
+files = sorted(os.listdir("Panda-Userbot"))
+for plugin_name in files:
+    try:
+        if plugin_name.endswith(".py"):
+            load_panda(plugin_name[:-3])
+            if not plugin_name.startswith("__") or plugin_name.startswith("_"):
+                LOGS.info(f"🐼 PandaUserbot - Official -  Installed - {plugin_name}")
+    except Exception:
+        LOGS.info(f"🐼 PandaUserbot - Official - ERROR - {plugin_name}")
+        LOGS.info(str(traceback.print_exc()))
+
 
 # for assistant
 files = sorted(os.listdir("assistant"))
