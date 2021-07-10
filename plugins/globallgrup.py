@@ -248,7 +248,7 @@ async def _(e):
             else:
                 if x.is_group or x.is_channel:
                     try:
-                        await ultroid_bot(
+                        await petercordpanda_bot(
                             EditAdminRequest(
                                 x.id,
                                 user.id,
@@ -284,7 +284,7 @@ async def _(e):
             if "group" in key.lower():
                 if x.is_group:
                     try:
-                        await ultroid_bot(
+                        await petercordpanda_bot(
                             EditAdminRequest(
                                 x.id,
                                 user,
@@ -298,7 +298,7 @@ async def _(e):
             elif "channel" in key.lower():
                 if x.is_channel:
                     try:
-                        await ultroid_bot(
+                        await petercordpanda_bot(
                             EditAdminRequest(
                                 x.id,
                                 user,
