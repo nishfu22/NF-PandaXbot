@@ -43,6 +43,8 @@ _main_help_menu = [
     [
         Button.inline("📙 𝙿𝙻𝚄𝙶𝙸𝙽𝚂 📙", data="hrrrr"),
         Button.inline("📗 𝐌𝐨𝐝𝐮𝐥𝐞𝐬 📗", data="frrr"),
+    ],
+    [
         Button.inline("📒Exra Panda📒", data="ilham"),
     ],
     [
