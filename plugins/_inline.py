@@ -115,6 +115,7 @@ async def inline_handler(event):
             OWNER_NAME,
             len(PLUGINS),
             len(MODULES),
+            len(PANDA),
             len(z),
         ),
         buttons=_main_help_menu,
