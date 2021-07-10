@@ -171,6 +171,7 @@ async def setting(event):
             OWNER_NAME,
             len(PLUGINS),
             len(MODULES),
+            len(PANDA),
             cmd,
         ),
         file=_file_to_replace,
@@ -334,7 +335,7 @@ async def addon(event):
 @owner
 async def on_plug_in_callback_query_handler(event):
     xhelps = helps.format(OWNER_NAME, len(PANDA))
-    buttons = page_num(0, PANDA, "helpme", "def")
+    buttons = page_num(0, PANDA, "ilhammansiz", "panda")
     await event.edit(f"{xhelps}", buttons=buttons, link_preview=False)
 
 
@@ -364,7 +365,7 @@ async def on_plug_in_callback_query_handler(event):
 @owner
 async def on_plug_in_callback_query_handler(event):
     current_page_number = int(event.data_match.group(1).decode("UTF-8"))
-    buttons = page_num(current_page_number + 1, PANDA, "helpme", "def")
+    buttons = page_num(current_page_number + 1, PANDA, "ilhammansiz", "panda")
     await event.edit(buttons=buttons, link_preview=False)
 
 
@@ -387,7 +388,7 @@ async def on_plug_in_callback_query_handler(event):
 @owner
 async def on_plug_in_callback_query_handler(event):
     current_page_number = int(event.data_match.group(1).decode("UTF-8"))
-    buttons = page_num(current_page_number - 1, PANDA, "helpme", "def")
+    buttons = page_num(current_page_number - 1, PANDA, "ilhammansiz", "panda")
     await event.edit(buttons=buttons, link_preview=False)
 
 
@@ -428,12 +429,12 @@ async def backr(event):
         link_preview=False,
     )
 
-@callback("back")
+@callback("backpanda")
 @owner
 async def backr(event):
     xhelps = helps.format(OWNER_NAME, len(PANDA))
     current_page_number = int(upage)
-    buttons = page_num(current_page_number, PANDA, "helpme", "def")
+    buttons = page_num(current_page_number, PANDA, "ilhammansiz", "panda")
     await event.edit(
         f"{xhelps}",
         file=_file_to_replace,
