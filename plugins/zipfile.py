@@ -1,5 +1,3 @@
-
-
 """
 💐 Commands Available
 • `{i}zip <reply to file>
@@ -127,7 +125,9 @@ async def do_zip(event):
     xx = await eor(event, "`processing`")
     await bash(f"zip -r petercordpanda.zip zip/*")
     k = time.time()
-    xxx = await uploader("petercordpanda.zip", "petercordpanda.zip", k, xx, "Uploading...")
+    xxx = await uploader(
+        "petercordpanda.zip", "petercordpanda.zip", k, xx, "Uploading..."
+    )
     await petercordpanda_bot.send_file(
         event.chat_id,
         xxx,
