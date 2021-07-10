@@ -1,8 +1,9 @@
 """
-💐 Commands Available : hack
-• `{i}payudara`
-   hack menipu.
+💐 Commands Available -
+• `{i}hack`
+   ketik {i}hack untuk meng hack.
 """
+
 
 import asyncio
 from . import *
