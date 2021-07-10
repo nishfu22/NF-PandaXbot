@@ -52,13 +52,13 @@ async def ult(ult):
                 get_string("inline_4").format(
                     OWNER_NAME,
                     len(PLUGINS) - 5,
-                    len(ADDONS),
+                    len(MODULES),
                     cmd,
                 ),
                 buttons=[
                     [
                         Button.inline("📙 ᴘʟᴜɢɪɴs 📙", data="hrrrr"),
-                        Button.inline("📗 ᴀᴅᴅᴏɴs 📗", data="frrr"),
+                        Button.inline("📗 Modulez 📗", data="frrr"),
                     ],
                     [
                         Button.inline("🐼 ᴏᴡɴᴇʀ ᴛᴏᴏʟs 🐼", data="ownr"),
