@@ -38,7 +38,7 @@ async def logo_gen(event):
     else:
         pics = []
         async for i in petercordpanda.iter_messages(
-            "@SakuraLogos", filter=InputMessagesFilterPhotos
+            "@PandaLogo", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
         id_ = random.choice(pics)
@@ -48,7 +48,7 @@ async def logo_gen(event):
     if not bg_:
         pics = []
         async for i in petercordpanda.iter_messages(
-            "@SakuraLogos", filter=InputMessagesFilterPhotos
+            "@PandaLogo", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
         id_ = random.choice(pics)
@@ -82,7 +82,7 @@ async def logo_gen(event):
     draw.text(
         (x, y), name, font=font, fill="white", stroke_width=strke, stroke_fill="black"
     )
-    flnme = f"ultd.png"
+    flnme = f"panda.png"
     img.save(flnme, "png")
     await xx.edit("`Done!`")
     if os.path.exists(flnme):
