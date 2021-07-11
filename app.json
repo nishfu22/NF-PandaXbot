@@ -1,5 +1,5 @@
 {
-  "name": "NF-PandaXbot",
+  "name": "NF-TigerXbot",
   "description": "A simple Telegram userbot based on Telethon . Maintained by IlhamMansiez ",
   "logo": "https://telegra.ph/file/3cfda2e8353bb1569cc79.jpg",
   "keywords": [
@@ -7,7 +7,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/nishfu22/NF-PandaXbot",
+  "repository": "https://github.com/nishfu22/NF-TigerXbot",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
