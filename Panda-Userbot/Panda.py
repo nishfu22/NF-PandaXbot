@@ -1,4 +1,51 @@
 
+"""
+💐 Commands Available -
+• `{i}sad`
+  `liat aja sendiri. `
+• `{i}gabut`
+  `liat sendiri. `
+• `{i}mantan`
+  `mantan ajg. `
+• `{i}galau`
+  `liat sendiri. `
+• `{i}sedih`
+  `liat sendiri. `
+• `{i}fuck`
+  `liat sendiri. `
+• `{i}razia`
+  `liat sendiri. `
+• `{i}raziamasker`
+  `liat sendiri. `
+• `{i}jalan`
+  `liat sendiri. `
+• `{i}pantun`
+  `liat sendiri. `
+• `{i}sad`
+  `liat sendiri. `
+• `{i}sayang`
+  `liat sendiri. `
+• `{i}yang`
+  `liat sendiri. `
+• `{i}dino`
+  `liat sendiri. `
+• `{i}terkadang`
+  `liat sendiri. `
+• `{i}mf`
+  `liat sendiri. `
+• `{i}p`
+  `salam. `
+• `{i}l`
+  `jawab salam. `
+• `{i}cinta`
+  `liat sendiri. `
+• `{i}melamar`
+  `liat sendiri. `
+• `{i}buaya`
+  `liat sendiri. `
+"""
+
+
 import asyncio
 from time import sleep
 
