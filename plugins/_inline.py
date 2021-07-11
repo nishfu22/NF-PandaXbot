@@ -15,7 +15,7 @@ from . import *
 # ================================================#
 notmine = f"ini adalah bot milik {OWNER_NAME}"
 
-TLINK = "https://telegra.ph/file/0d025dc216d0ae5d36b07.jpg"
+TLINK = "https://telegra.ph/file/de53eaa7cf3ebc1e69f82.jpg"
 helps = get_string("inline_1")
 helpspanda = get_string("inline_ilham")
 
