@@ -6,14 +6,7 @@ from telethon import events
 from . import *
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="sayang$",
-    command=("sayang", plugin_category),
-    info={
-        "header": "Sayang aku sayang kamu",
-        "usage": "{tr}sayang",
-    },
-)
+@ilhammansiz_cmd(pattern="sayang ?(.*)")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("I LOVEE YOUUU 💕")
@@ -42,14 +35,7 @@ async def koc(e):
         await e.edit("GA DITERIMA🥺🥺💞")
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="dino$",
-    command=("dino", plugin_category),
-    info={
-        "header": "Dikejar dino",
-        "usage": "{tr}dino",
-    },
-)
+@ilhammansiz_cmd(pattern="dino ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`DIN DINNN.....`")
@@ -107,14 +93,7 @@ async def typewriter(typew):
     await typew.edit("`-NUNGGUIN YA DAH HABIS BATERAINYA☹️-`")
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="gabut$",
-    command=("gabut", plugin_category),
-    info={
-        "header": "Gabut aku",
-        "usage": "{tr}gabut",
-    },
-)
+@ilhammansiz_cmd(pattern="gabut ?(.*)")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`PERNAAHHHHH KAHHH KAUUU MENGIRA`")
@@ -378,14 +357,7 @@ async def koc(e):
         await e.edit("`GABUT`")
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="terkadang$",
-    command=("terkadang", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}terkadang",
-    },
-)
+@ilhammansiz_cmd(pattern="terkadang ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Terkadang`")
@@ -404,14 +376,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="mf$",
-    command=("mf", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}mf",
-    },
-)
+@ilhammansiz_cmd(pattern="mf ?(.*)")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`mf g dl` **ミ(ノ;_ _)ノ=3** ")
@@ -455,14 +420,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="gombal$",
-    command=("gombal", plugin_category),
-    info={
-        "header": "Gombalin",
-        "usage": "{tr}gombal",
-    },
-)
+@ilhammansiz_cmd(pattern="gombal ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -490,14 +448,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="mantan$",
-    command=("mantan", plugin_category),
-    info={
-        "header": "teringat mantan",
-        "usage": "{tr}mantan",
-    },
-)
+@ilhammansiz_cmd(pattern="mantan ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -531,14 +482,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="sedih$",
-    command=("sedih", plugin_category),
-    info={
-        "header": "sedih kaki kali",
-        "usage": "{tr}sedih",
-    },
-)
+@ilhammansiz_cmd(pattern="sedih ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -566,14 +510,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="salam$",
-    command=("salam", plugin_category),
-    info={
-        "header": "salam",
-        "usage": "{tr}salam",
-    },
-)
+@ilhammansiz_cmd(pattern="p ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -585,14 +522,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="jawab$",
-    command=("jawab", plugin_category),
-    info={
-        "header": "jawab salam",
-        "usage": "{tr}jawab",
-    },
-)
+@ilhammansiz_cmd(pattern="l ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -604,14 +534,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="pantun$",
-    command=("pantun", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}pantun",
-    },
-)
+@ilhammansiz_cmd(pattern="pantun ?(.*)")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         sleep(1)
@@ -667,14 +590,7 @@ async def koc(e):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="galau$",
-    command=("galau", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}galau",
-    },
-)
+@ilhammansiz_cmd(pattern="galau ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(5)
@@ -698,14 +614,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="sad$",
-    command=("sad", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}sad",
-    },
-)
+@ilhammansiz_cmd(pattern="sad ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -729,14 +638,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="razia$",
-    command=("razia", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}razia",
-    },
-)
+@ilhammansiz_cmd(pattern="razia ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -760,14 +662,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="wkwk$",
-    command=("wkwk", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}wkwk",
-    },
-)
+@ilhammansiz_cmd(pattern="wkwk ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -791,14 +686,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="melamar$",
-    command=("melamar", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}melamar",
-    },
-)
+@ilhammansiz_cmd(pattern="melamar ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -822,14 +710,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="buaya$",
-    command=("buaya", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}buaya",
-    },
-)
+@ilhammansiz_cmd(pattern="buaya ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -853,14 +734,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="yang$",
-    command=("yang", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}yang",
-    },
-)
+@ilhammansiz_cmd(pattern="yang ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -884,14 +758,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="raziamasker$",
-    command=("eaziamasker", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}raziamasker",
-    },
-)
+@ilhammansiz_cmd(pattern="raziamasker ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`ADA SATPOL PP LARI.....`")
@@ -952,14 +819,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="jalan$",
-    command=("jalan", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}jalan",
-    },
-)
+@ilhammansiz_cmd(pattern="jalan ?(.*)")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("BOSEN GAK ADA KEGIATAN")
@@ -1113,14 +973,7 @@ async def koc(e):
 # Create by myself @localheart
 
 
-@pandaub.ilhammansiz_cmd(
-    pattern="fuck$",
-    command=("fuck", plugin_category),
-    info={
-        "header": "Fun animation try yourself to know more",
-        "usage": "{tr}fuck",
-    },
-)
+@ilhammansiz_cmd(pattern="fuck ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(".                       /¯ )")
