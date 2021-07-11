@@ -440,7 +440,7 @@ async def backr(event):
 @callback("backpanda")
 @owner
 async def backr(event):
-    phelps = helpspand.format(OWNER_NAME, len(PANDA))
+    phelps = helpspanda.format(OWNER_NAME, len(PANDA))
     current_page_number = int(upage)
     buttons = page_num(current_page_number, PANDA, "ilhammansiz", "panda")
     await event.edit(
