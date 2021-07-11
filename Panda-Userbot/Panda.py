@@ -1,7 +1,7 @@
 
 """
 💐 Commands Available -
-• `{i}sad`
+• `{i}mengsad`
   `liat aja sendiri. `
 • `{i}gabut`
   `liat sendiri. `
@@ -661,7 +661,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@ilhammansiz_cmd(pattern="sad ?(.*)")
+@ilhammansiz_cmd(pattern="mengsad ?(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
