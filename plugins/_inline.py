@@ -653,7 +653,7 @@ def page_num(page_number, loaded_plugins, prefix, type):
     if emoji:
         multi, mult2i = emoji, emoji
     else:
-        multi, mult2i = "🔖", "🔖"
+        multi, mult2i = "☄", "☄"
     helpable_plugins = []
     global upage
     upage = page_number
