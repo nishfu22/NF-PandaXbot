@@ -39,17 +39,17 @@ else:
 
 _main_help_menu = [
     [
-        Button.url("🏅 SUPPORT 🏅", url=f"https://t.me/TEAMSquadUserbotSupport"),
+        Button.url("🌀 SUPPORT 🌀", url=f"https://t.me/TEAMSquadUserbotSupport"),
     ],
     [
-        Button.inline("📙 𝙿𝙻𝚄𝙶𝙸𝙽𝚂 📙", data="hrrrr"),
-        Button.inline("📗 𝐌𝐨𝐝𝐮𝐥𝐞𝐬 📗", data="frrr"),
+        Button.inline("🌀 𝙿𝙻𝚄𝙶𝙸𝙽𝚂 🌀", data="hrrrr"),
+        Button.inline("🌀 𝐌𝐨𝐝𝐮𝐥𝐞𝐬 🌀", data="frrr"),
     ],
     [
-        Button.inline("📒Exra Panda📒", data="ilham"),
+        Button.inline("🌀Exra Macan🌀", data="ilham"),
     ],
     [
-        Button.inline("🐼 DATA PANDA 🐼", data="ownr"),
+        Button.inline("🐯 DATA MACAN 🐯", data="ownr"),
         Button.inline("🎗 PlayStore 🎗", data="inlone"),
     ],
     [
@@ -60,12 +60,12 @@ _main_help_menu = [
 
 SUP_BUTTONS = [
     [
-        Button.url("𝚁𝙴𝙿𝙾", url="https://github.com/IlhamMansiz/PandaX_Userbot"),
+        Button.url("𝚁𝙴𝙿𝙾", url="https://github.com/nishfu22/NF-TigerXbot"),
         Button.url(
             "𝐌𝐨𝐝𝐮𝐥𝐞𝐬", url="https://github.com/IlhamMansiz/PandaX_UserbotModules"
         ),
     ],
-    [Button.url("SUPPORT", url="https://t.me/TEAMSquadUserbotSupport")],
+    [Button.url("SUPPORT", url="https://t.me/HappyZgameBot")],
 ]
 
 # --------------------BUTTONS--------------------#
@@ -76,7 +76,7 @@ SUP_BUTTONS = [
 async def inline_alive(o):
     if len(o.text) == 0:
         b = o.builder
-        MSG = "🐼 **Panda Userbot** 🐼"
+        MSG = "🐯 **Tiger Userbot** 🐯"
         uptime = grt(time.time() - start_time)
         MSG += f"\n\n⚡ **UPTIME** - `{uptime}`\n"
         MSG += f"👾 **OWNER** - `{OWNER_NAME}`"
@@ -92,7 +92,7 @@ async def inline_alive(o):
                     media=True,
                     buttons=SUP_BUTTONS,
                 ),
-                title="🐼 PANDAUSERBOT 🐼",
+                title="🐯 TIGERUSERBOT 🐯",
                 description="USERBOT | TELETHON",
                 url=TLINK,
                 thumb=WEB0,
@@ -653,7 +653,7 @@ def page_num(page_number, loaded_plugins, prefix, type):
     if emoji:
         multi, mult2i = emoji, emoji
     else:
-        multi, mult2i = "☄", "☄"
+        multi, mult2i = "🌀", "🌀"
     helpable_plugins = []
     global upage
     upage = page_number
