@@ -322,7 +322,7 @@ async def on_plug_in_callback_query_handler(event):
 async def on_plug_in_callback_query_handler(event):
     phelps = helpspanda.format(OWNER_NAME, len(PANDA))
     buttons = page_num(0, PANDA, "ilhammansiz", "panda")
-    await event.edit(f"{xhelps}", buttons=buttons, link_preview=False)
+    await event.edit(f"{phelps}", buttons=buttons, link_preview=False)
 
 
 @callback("frrr")
