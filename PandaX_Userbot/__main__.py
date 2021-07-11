@@ -181,8 +181,8 @@ async def autopilot():
     try:
         r = await petercordpanda_bot(
             CreateChannelRequest(
-                title="🐼 Panda Privat Grup",
-                about="🐼 Panda Privat Grup\n\n Join @TEAMSquadUserbotSupport",
+                title="🐯 TigerXbot Privat Grup",
+                about="🐯 TigerXbot Privat Grup\n\n Join @HappyZgameBot",
                 megagroup=True,
             ),
         )
@@ -238,12 +238,12 @@ async def bot_info(asst):
 LOGS.info("Initialising...")
 LOGS.info(f"PandaX_Userbot Version - {ver}")
 LOGS.info(f"🤖 Telethon Version 🤖- {vers}")
-LOGS.info("🐼 PandaUserbot Version - 0.0.8.1")
+LOGS.info("🐯 TigerXbot Version - 0.0.8.1")
 
 
 # log in
 BOT_TOKEN = udB.get("BOT_TOKEN")
-LOGS.info("Starting 🐼 PandaUserbot...")
+LOGS.info("Starting 🐯 TigerXbot...")
 try:
     petercordpanda_bot.asst = TelegramClient(
         "asst-session", api_id=Var.API_ID, api_hash=Var.API_HASH
@@ -255,7 +255,7 @@ try:
     LOGS.info("UserBot - Started")
 except AuthKeyDuplicatedError or PhoneNumberInvalidError or EOFError:
     LOGS.info(
-        "Session String expired. Please create a new one! 🐼 PandaUserbot stopping..."
+        "Session String expired. Please create a new one! 🦁 TigerXbot stopping..."
     )
     exit(1)
 except ApiIdInvalidError:
@@ -287,9 +287,9 @@ for plugin_name in files:
         if plugin_name.endswith(".py"):
             load_plugins(plugin_name[:-3])
             if not plugin_name.startswith("__") or plugin_name.startswith("_"):
-                LOGS.info(f"🐼 PandaUserbot - Official -  Installed - {plugin_name}")
+                LOGS.info(f"🐯 TigerXbot - Official -  Installed - {plugin_name}")
     except Exception:
-        LOGS.info(f"🐼 PandaUserbot - Official - ERROR - {plugin_name}")
+        LOGS.info(f"🐯 TigerXbot - Official - ERROR - {plugin_name}")
         LOGS.info(str(traceback.print_exc()))
 
 #for panda
@@ -299,9 +299,9 @@ for plugin_name in files:
         if plugin_name.endswith(".py"):
             load_panda(plugin_name[:-3])
             if not plugin_name.startswith("__") or plugin_name.startswith("_"):
-                LOGS.info(f"🐼 PandaUserbot - Official -  Installed - {plugin_name}")
+                LOGS.info(f"🐯 TigerXbot - Official -  Installed - {plugin_name}")
     except Exception:
-        LOGS.info(f"🐼 PandaUserbot - Official - ERROR - {plugin_name}")
+        LOGS.info(f"🐯 TigerXbot - Official - ERROR - {plugin_name}")
         LOGS.info(str(traceback.print_exc()))
 
 
@@ -312,9 +312,9 @@ for plugin_name in files:
         if plugin_name.endswith(".py"):
             load_assistant(plugin_name[:-3])
             if not plugin_name.startswith("__") or plugin_name.startswith("_"):
-                LOGS.info(f"🐼 PandaUserbot - Assistant -  Installed - {plugin_name}")
+                LOGS.info(f"🐯 TigerXbot - Assistant -  Installed - {plugin_name}")
     except Exception:
-        LOGS.info(f"🐼 PandaUserbot - Assistant - ERROR - {plugin_name}")
+        LOGS.info(f"🐯 TigerXbot - Assistant - ERROR - {plugin_name}")
         LOGS.info(str(traceback.print_exc()))
 
 # for modules
@@ -334,9 +334,9 @@ if modules == "True" or modules is None:
             if plugin_name.endswith(".py"):
                 load_modules(plugin_name[:-3])
                 if not plugin_name.startswith("__") or plugin_name.startswith("_"):
-                    LOGS.info(f"🐼 PandaUserbot - Modules -  Installed - {plugin_name}")
+                    LOGS.info(f"🐯 TigerXbot - Modules -  Installed - {plugin_name}")
         except Exception:
-            LOGS.info(f"🐼 PandaUserbot - Modules - ERROR - {plugin_name}")
+            LOGS.info(f"🐯 TigerXbot - Modules - ERROR - {plugin_name}")
             LOGS.info(str(traceback.print_exc()))
 else:
     os.system("cp plugins/__init__.py modules/")
@@ -365,10 +365,10 @@ if Plug_channel:
                     try:
                         load_modules(plugin.replace(".py", ""))
                         LOGS.info(
-                            f"🐼 PandaUserbot - PLUGIN_CHANNEL - Installed - {plugin}"
+                            f"🐯 TigerXbot - PLUGIN_CHANNEL - Installed - {plugin}"
                         )
                     except Exception as e:
-                        LOGS.info(f"🐼 PandaUserbot - PLUGIN_CHANNEL - ERROR - {plugin}")
+                        LOGS.info(f"🐯 TigerXbot - PLUGIN_CHANNEL - ERROR - {plugin}")
                         LOGS.info(str(e))
                 else:
                     LOGS.info(f"Plugin {plugin} is Pre Installed")
@@ -430,7 +430,7 @@ async def customize():
             await asyncio.sleep(1)
             await petercordpanda_bot.send_message(
                 "botfather",
-                f"🐼 PandaUserbot Assistant\nPengguna ~ {sir}\n\nBy ~ @diemmmmmmmmmm\nSupport ~ @TEAMSquadUserbotSupport ",
+                f"🐯 TigerXbot Assistant\nPengguna ~ {sir}\n\nBy ~ @diemmmmmmmmmm\nSupport ~ @HappyZgameBot ",
             )
             await asyncio.sleep(2)
             await petercordpanda_bot.send_message(
@@ -444,7 +444,7 @@ async def customize():
 # some stuffs
 async def ready():
     chat_id = int(udB.get("LOG_CHANNEL"))
-    MSG = f"**🐼 PandaUserbot Menyala **\n➖➖➖➖➖➖➖➖➖\n**UserMode**: [{petercordpanda_bot.me.first_name}](tg://user?id={petercordpanda_bot.me.id})\n**Assistant**: @{asst.me.username}\n➖➖➖➖➖➖➖➖➖\n**Support**: @TEAMSquadUserbotSupport\n➖➖➖➖➖➖➖➖➖"
+    MSG = f"**🐯TigerXbot Menyala **\n➖➖➖➖➖➖➖➖➖\n**UserMode**: [{petercordpanda_bot.me.first_name}](tg://user?id={petercordpanda_bot.me.id})\n**Assistant**: @{asst.me.username}\n➖➖➖➖➖➖➖➖➖\n**Support**: @HappyZgameBot\n➖➖➖➖➖➖➖➖➖"
     BTTS = [Button.inline("Help", "open")]
     updava = await updater()
     try:
@@ -461,7 +461,7 @@ async def ready():
             LOGS.info(ef)
     try:
         # To Let Them know About New Updates and Changes
-        await petercordpanda_bot(JoinChannelRequest("@TEAMSquadUserbotSupport"))
+        await petercordpanda_bot(JoinChannelRequest("@kutipankitaa"))
     except BaseException:
         pass
 
@@ -494,7 +494,7 @@ petercordpanda_bot.loop.run_until_complete(ready())
 LOGS.info(
     """
                 ----------------------------------------------------------------------
-                   🐼 PandaUserbot berhasil deployed! Contact @diemmmmmmmmmm for updates!!
+                   🐯 TigerXbot berhasil deployed! Contact @pachemild for updates!!
                 ----------------------------------------------------------------------
 """
 )
