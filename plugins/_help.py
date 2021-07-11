@@ -19,19 +19,19 @@ async def ult(ult):
                 output = f"**plugin** - `{plug}`\n"
                 for i in HELP[plug]:
                     output += i
-                output += "\n☑ @TEAMSquadUserbotSupport"
+                output += "\n🌀 @HappyZgameBot"
                 await eor(ult, output)
             elif plug in CMD_HELP:
-                kk = f"nama plugin-{plug}\n\n📚 Commands Available -\n\n"
+                kk = f"nama plugin-{plug}\n\n🗡 Commands Available -\n\n"
                 kk += str(CMD_HELP[plug])
                 await eor(ult, kk)
             else:
                 try:
-                    x = f"nama plugin-{plug}\n\n📚 Commands Available -\n\n"
+                    x = f"nama plugin-{plug}\n\n🗡 Commands Available -\n\n"
                     for d in LIST[plug]:
                         x += HNDLR + d
                         x += "\n"
-                    x += "\n☑ @TEAMSquadUserbotSupport"
+                    x += "\n🌀 @HappyZgameBot"
                     await eor(ult, x)
                 except BaseException:
                     await eod(ult, get_string("help_1").format(plug), time=5)
@@ -58,12 +58,12 @@ async def ult(ult):
                 ),
                 buttons=[
                     [
-                        Button.inline("📙 ᴘʟᴜɢɪɴs 📙", data="hrrrr"),
-                        Button.inline("📗 Modules 📗", data="frrr"),
+                        Button.inline("🌀 ᴘʟᴜɢɪɴs 🌀", data="hrrrr"),
+                        Button.inline("🌀 Modules 🌀", data="frrr"),
                     ],
                     [
-                        Button.inline("🐼 ᴏᴡɴᴇʀ ᴛᴏᴏʟs 🐼", data="ownr"),
-                        Button.inline("📗 ɪɴʟɪɴᴇ ᴘʟᴜɢɪɴs 📗", data="inlone"),
+                        Button.inline("🌀 ᴏᴡɴᴇʀ ᴛᴏᴏʟs 🌀", data="ownr"),
+                        Button.inline("🌀 ɪɴʟɪɴᴇ ᴘʟᴜɢɪɴs 🌀", data="inlone"),
                     ],
                     [Button.url("⚙️ sᴇᴛᴛɪɴɢs ⚙️", url=f"https://t.me/{bnn}?start=set")],
                     [Button.inline("✖ ᴄʟᴏsᴇ ✖", data="close")],
